@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
 
     private void Register<TManager, TConfig>(Func<TConfig, TManager> factory) where TManager : baseManager where TConfig : BaseScriptableObject
     {
-      
+    
         TConfig config = (TConfig)dicBaseScriptableObject[typeof(TConfig)];
         TManager manager = factory(config);
         // 제네릭은 new TManager 가 안되서 어쩔수없이 Func<TConfig, TManager> factory 사용 
@@ -66,6 +66,6 @@ public class GameController : MonoBehaviour
     void Update()
     {
 
-       
+     
     }
 }
